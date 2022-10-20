@@ -1,3 +1,8 @@
+#define __CRTDBG_MAP_ALLOC
+#include <crtdbg.h>
+#define DEBUG_NEW new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#define new DEBUG_NEW
+
 #include "Camera.h"
 #include "Player.h"
 #include "ManicureMachine.h"
@@ -13,7 +18,7 @@ int main()
 
     const int electronicsCount = 5;
 
-	IElectronics* electronics[electronicsCount];
+	IElectronics* electronics [electronicsCount];
 
     electronics[0] = new Camera(5, 10);
     electronics[1] = new Player(4, 20);
@@ -83,6 +88,7 @@ int main()
         delete electronics[i];
     }
 
+    _CrtDumpMemoryLeaks();
 	return 0;
 }
 
@@ -92,5 +98,5 @@ int main()
     для всего массива, далее delete автоматически вызовет 
     деструктуры для каждого объекта в массиве.
 V 1. В заголовочных файлах не рекомендуется использовать using, т.к. это может привести к коллизии имен.
-? 2. Неиспользуемые хедеры из файлов нужно удалять.
+V 2. Неиспользуемые хедеры из файлов нужно удалять.
 */
