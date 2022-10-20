@@ -5,7 +5,7 @@ class Camera final : public Device
 {
 public:
 	Camera(int batteryLife, int diskSize);
-	void ShowSpec() override;
+	void showSpec() override;
 
 private:
 	int _diskSize;

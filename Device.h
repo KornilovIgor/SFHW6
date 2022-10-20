@@ -5,7 +5,7 @@ class Device : virtual public IElectronics
 {
 public:
     Device(int batteryLife);
-    void ShowSpec() override;
+    void showSpec() override;
 
 protected:
     int _batteryLife;

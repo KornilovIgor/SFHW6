@@ -1,14 +1,16 @@
 #include "ManicureMachine.h"
+#include <iostream>
 
 ManicureMachine::ManicureMachine(int weight, int speed) :
 	Appliances(weight), _speed(speed)
 {
 }
 
-void ManicureMachine::ShowSpec()
+void ManicureMachine::showSpec()
 {
-	cout << "\nManicureMachine" << endl;
-	cout << "Weight: " << _weight << " mm" << endl;
-	cout << "Speed: " << _speed << " rpm" << endl;
-	cout << endl;
+	std::cout << std::endl 
+		<< "ManicureMachine" << std::endl
+		<< "Weight: " << _weight << " mm" << std::endl
+		<< "Speed: " << _speed << " rpm" << std::endl
+		<< std::endl;
 }

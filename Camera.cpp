@@ -1,4 +1,5 @@
 #include "Camera.h"
+#include <iostream>
 
 Camera::Camera(int batteryLife, int diskSize) :
 	Device(batteryLife),
@@ -6,10 +7,11 @@ Camera::Camera(int batteryLife, int diskSize) :
 {
 }
 
-void Camera::ShowSpec()
+void Camera::showSpec()
 {
-	cout << "\nCamera" << endl;
-	cout << "BatteryLife: " << _batteryLife << " hours" << endl;
-	cout << "Disk Size: " << _diskSize << "GB" << endl;
-	cout << endl;
+	std::cout << std::endl
+		<< "Camera" << std::endl
+		<< "BatteryLife: " << _batteryLife << " hours" << std::endl
+		<< "Disk Size: " << _diskSize << "GB" << std::endl
+		<< std::endl;
 }

@@ -1,10 +1,11 @@
 #include "Appliances.h"
+#include <iostream>
 
 Appliances::Appliances(int weight) : _weight(weight)
 {
 }
 
-void Appliances::ShowSpec()
+void Appliances::showSpec()
 {
-    cout << "Weight: " << _weight << endl;
+    std::cout << "Weight: " << _weight << std::endl;
 }

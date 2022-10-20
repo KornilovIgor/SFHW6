@@ -6,6 +6,5 @@ class ÑordlessDrill final : public Device, public Appliances
 {
 public:
 	ÑordlessDrill(int batteryLife, int weight);
-	void ShowSpec() override;
+	void showSpec() override;
 };
-

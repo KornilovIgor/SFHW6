@@ -5,7 +5,7 @@ class WeldingMachine final : public Appliances
 {
 public:
 	WeldingMachine(int weight, int power);
-	void ShowSpec() override;
+	void showSpec() override;
 
 private:
 	int _power;

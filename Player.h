@@ -5,7 +5,7 @@ class Player final : public Device
 {
 public:
 	Player(int batteryLife, int totalTracks);
-	void ShowSpec() override;
+	void showSpec() override;
 
 private:
 	int _totalTracks;

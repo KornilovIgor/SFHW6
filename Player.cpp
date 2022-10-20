@@ -1,4 +1,5 @@
 #include "Player.h"
+#include <iostream>
 
 Player::Player(int batteryLife, int totalTracks) :
 	Device(batteryLife),
@@ -6,10 +7,11 @@ Player::Player(int batteryLife, int totalTracks) :
 {
 }
 
-void Player::ShowSpec()
+void Player::showSpec()
 {
-	cout << "\nPlayer" << endl;
-	cout << "BatteryLife: " << _batteryLife << " hours" << endl;
-	cout << "Total tracks: " << _totalTracks << endl;
-	cout << endl;
+	std::cout << std::endl
+		<< "Player" << std::endl
+		<< "BatteryLife: " << _batteryLife << " hours" << std::endl
+		<< "Total tracks: " << _totalTracks << std::endl
+		<< std::endl;
 }
